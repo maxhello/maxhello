@@ -1,0 +1,25 @@
+# 每天读主站仓库公开的 data/duolingo-history.json,刷新本仓库 README 的徽章段落。
+# 数据采集在 maxhello.github.io 的 duolingo.yml 里做,这里只消费已发布的结果,零密钥。
+name: duolingo-badge
+
+on:
+  schedule:
+    - cron: '37 16 * * *' # 北京 00:37,晚于主站 23:53 的权威快照
+  workflow_dispatch: # 支持手动触发,方便调试
+
+permissions:
+  contents: write
+
+jobs:
+  badge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/update_badge.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || (git commit -m "chore: refresh duolingo badge" && git push)

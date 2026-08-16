@@ -1,16 +1,14 @@
-## Hi there 👋
+# Hi, I'm Max Zhang 👋
 
-<!--
-**maxhello/maxhello** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Backend & systems engineer exploring AI.
 
-Here are some ideas to get you started:
+- 🌐 Site: [maxhello.github.io](https://maxhello.github.io) — projects, notes, and an English-learning dashboard
+- ⚡ Latest build: [lp-lab](https://github.com/maxhello/lp-lab) — employee shift scheduling in milliseconds with OR-Tools CP-SAT · [live demo](https://lp-lab.onrender.com/)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🦉 English streak
+
+<!-- duolingo-badge:start -->
+🔥 **21**-day streak · ⚡ **11,086** XP · last 14 days ▅▅▇▆▇▄▂▃▄▆█▅▅▆ · updated 2026-08-16
+<!-- duolingo-badge:end -->
+
+_Auto-refreshed daily from [my learning-data pipeline](https://github.com/maxhello/maxhello.github.io/blob/main/data/duolingo-history.json) — no third-party trackers, just my own automation._
