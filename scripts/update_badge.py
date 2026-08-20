@@ -52,7 +52,9 @@ def render(snap):
 
 
 def main():
-    snap = fetch_json(DATA_URL)[-1]
+    data = fetch_json(DATA_URL)
+    # 主站 2026-08-20 起数据文件为对象结构 {meta, current, days, daily}
+    snap = {**data["days"][-1], "daily": data.get("daily") or {}}
     # 字段残缺就变红退出,绝不渲染误导性数字(与主站管道同一原则)
     for k in ("date", "streak", "totalXp"):
         if snap.get(k) is None:
