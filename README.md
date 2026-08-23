@@ -8,7 +8,7 @@ Backend & systems engineer exploring AI.
 ## 🦉 English streak
 
 <!-- duolingo-badge:start -->
-🔥 **27**-day streak · ⚡ **18,263** XP · last 14 days ▂▃▄▆▄▃▅▆▃▆█▆█▆ · updated 2026-08-22
+🔥 **28**-day streak · ⚡ **19,379** XP · last 14 days ▃▄▆▄▃▅▆▃▆█▆█▆▆ · updated 2026-08-23
 <!-- duolingo-badge:end -->
 
 _Auto-refreshed daily from [my learning-data pipeline](https://github.com/maxhello/maxhello.github.io/blob/main/data/duolingo-history.json) — no third-party trackers, just my own automation._
