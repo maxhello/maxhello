@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """刷新 profile README 里的多邻国徽章段落。
 
-数据源是公开的 maxhello.github.io 仓库快照(每天由该仓库的 duolingo.yml 定时更新),
+数据源是个人站点后端 site-api 的公开只读接口(数据每天北京 04:30 由 k3s 定时采集入库;
+2026-11-15 前读的是 maxhello.github.io 仓库里的 data/duolingo-history.json,该文件已删除)。
 本脚本不碰多邻国 API、不需要任何密钥 —— 只消费已发布的数据。
 用法: python3 scripts/update_badge.py
 本地 python.org 安装缺 CA 证书时: BADGE_INSECURE=1 python3 scripts/update_badge.py
@@ -13,10 +14,7 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta
 
-DATA_URL = (
-    "https://raw.githubusercontent.com/maxhello/maxhello.github.io/"
-    "main/data/duolingo-history.json"
-)
+DATA_URL = "https://tutor.161-118-222-205.sslip.io/api/learning/duolingo-history"
 README = os.path.join(os.path.dirname(__file__), "..", "README.md")
 START = "<!-- duolingo-badge:start -->"
 END = "<!-- duolingo-badge:end -->"

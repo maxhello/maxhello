@@ -1,10 +1,10 @@
-# 每天读主站仓库公开的 data/duolingo-history.json,刷新本仓库 README 的徽章段落。
-# 数据采集在 maxhello.github.io 的 duolingo.yml 里做,这里只消费已发布的结果,零密钥。
+# 每天读个人站点后端 site-api 的公开接口(/api/learning/duolingo-history),刷新本仓库 README 的徽章段落。
+# 数据采集在 k3s 上每天北京 04:30 跑(源码在 maxhello.github.io 的 site-api/),这里只消费结果,零密钥。
 name: duolingo-badge
 
 on:
   schedule:
-    - cron: '37 16 * * *' # 北京 00:37,晚于主站 23:53 的权威快照
+    - cron: '37 21 * * *' # 北京 05:37,晚于 04:30 的采集(GitHub 定时会再晚几小时,不影响)
   workflow_dispatch: # 支持手动触发,方便调试
 
 permissions:
